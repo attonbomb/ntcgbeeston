@@ -1,18 +1,17 @@
 # Starter pipeline
-- task: AzureFileCopy@3
-  inputs:
-    SourcePath: '${Build.Directory}'
-    azureSubscription: 'Free Trial (c0435d7b-25c0-49e0-9005-53231a7952dd)'
-    Destination: 'AzureBlob'
-    storage: 'ntcgbeestonstorage'
-    ContainerName: '$web'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
 trigger:
 - master
-
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 pool:
   vmImage: 'ubuntu-latest'
 
