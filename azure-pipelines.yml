@@ -20,7 +20,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: './'
-    Contents: 'index.html'
+    Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
 - task: PublishBuildArtifacts@1
