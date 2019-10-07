@@ -509,7 +509,7 @@ p {
 
 .features {
 	padding: 100px 0 50px;
-	background: url('http://placehold.it/1920x1080') no-repeat center center;
+	background: url('../images/church_full.png') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	border: 0;
