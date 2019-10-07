@@ -238,7 +238,7 @@ p {
 	transition: background 0.5s;
 }
 .header.active {
-	background: #5C6D7F;
+	background: #292929;
 	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
 .logo_link {
