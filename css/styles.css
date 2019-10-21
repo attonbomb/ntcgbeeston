@@ -319,6 +319,7 @@ p {
 	position: relative;
 	max-width: 700px;
 	margin: 0 auto;
+	margin-top: 20px;
 	font-size: 18px;
 	line-height: 23px;
     font-family: 'robotolight', sans-serif;
@@ -361,14 +362,14 @@ p {
 	color: #444;
 }
 .green_button {
-	background: #4ace6f;
+	background: #cc9800;
 	color: #fff;
-	border: 1px solid #4ace6f;
+	border: 1px solid #cc9800;
 }
 .green_button:hover {
-	background: #3fb05e;
+	background: #a37a01;
 	color: #fff;
-	border: 1px solid #3fb05e;
+	border: 1px solid #a37a01;
 }
 .container_arrow {
 	position: absolute;
@@ -509,7 +510,7 @@ p {
 
 .features {
 	padding: 100px 0 50px;
-	background: url('http://placehold.it/1920x1080') no-repeat center center;
+	background: url('../images/church_full.png') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	border: 0;
