@@ -10,9 +10,9 @@ app.controller('myPageCtrl', function($scope,$http){
 	/* ------------------------------ */
 
 	$scope.mapInitialization = function() {
-		$scope.myLatlng = new google.maps.LatLng(33.96290,-118.43589),
+		$scope.myLatlng = new google.maps.LatLng(53.774122, -1.546130),
 		$scope.mapOptions = {
-			zoom: 14,
+			zoom: 18,
 			scrollwheel: false,
 			center: $scope.myLatlng
 		},
@@ -96,12 +96,12 @@ app.controller('myPageCtrl', function($scope,$http){
 				$scope.pageAnimate('gallery');
 			} else if ($(e.target).hasClass('link_team')) {
 				$scope.pageAnimate('team');
-			} else if ($(e.target).hasClass('link_customers')) {
-				$scope.pageAnimate('reviews');
+			} else if ($(e.target).hasClass('link_visit')) {
+				$scope.pageAnimate('address');
 			} else if ($(e.target).hasClass('container_button_subscribe')) {
-				$scope.pageAnimate('subscribe');
-			} else if ($(e.target).hasClass('container_button_message')) {
 				$scope.pageAnimate('contact');
+			} else if ($(e.target).hasClass('container_button_message')) {
+				$scope.pageAnimate('subscribe');
 			}
 		}
 	}

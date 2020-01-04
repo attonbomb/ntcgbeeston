@@ -89,6 +89,8 @@ p {
 }
 .section_title {
 	position: relative;
+	font-family: "Montserrat", sans-serif;
+    font-weight: 800;
 }
 .section_title:after {
 	content: '';
@@ -108,7 +110,7 @@ p {
 .section_subtitle {
 	position: relative;
 	margin-top: 30px;
-	font-family: 'open_sanslight', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #555;
 }
 .uk-margin-large-bottom.section_subtitle {
@@ -267,7 +269,7 @@ p {
 	padding: 0 14px;
 	color: #fff;
 	font-size: 12px;
-	font-family: 'robotoregular', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 0.65px;
 	text-shadow: 1px 1px 20px rgba(0,0,0,0.5);
 	text-transform: uppercase;
@@ -309,7 +311,7 @@ p {
 .container_subtitle {
 	position: relative;
 	color: #fff;
-	font-family: 'robotoregular', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 60px;
 	line-height: 67px;
     font-weight: 600;
@@ -322,7 +324,7 @@ p {
 	margin-top: 20px;
 	font-size: 18px;
 	line-height: 23px;
-    font-family: 'robotolight', sans-serif;
+    font-family: 'MontserratLight', sans-serif;
 	color: #fff;
 	text-shadow: 1px 1px 30px rgba(0,0,0,0.3);
 }
@@ -442,7 +444,7 @@ p {
 /******* Elements section *******/
 
 .elements {
-    padding: 70px 0 30px;
+    padding: 70px 0 70px;
 	background: #fff;
 }
 .elements_item_label {
@@ -471,6 +473,10 @@ p {
     font-size: 15px;
     font-family: arial, sans-serif;
 	color: #777;
+}
+
+.fb-live-img{
+	height: 4em;
 }
 
 /******* Description section *******/
@@ -510,7 +516,7 @@ p {
 
 .features {
 	padding: 100px 0 50px;
-	background: url('../images/church_full.png') no-repeat center center;
+	background: url('../images/joyful-worship.png') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	border: 0;
@@ -579,12 +585,12 @@ p {
 .price_block_title {
 	margin: 0;
 	color: #fff;
-    font-family: "robotoregular", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .price_block_cost {
 	margin: 0;
 	padding: 0;
-    font-family: "robotoregular", sans-serif;
+    font-family: "Montserrat", sans-serif;
 	font-size: 40px;
     font-weight: 600;
     color: #fff;
@@ -725,13 +731,13 @@ p {
 }
 .statistic_counter {
 	font-size: 85px;
-	font-family: "robotoregular", sans-serif;
+	font-family: "Montserrat", sans-serif;
     text-shadow: 1px 1px #777;
 }
 .statistic_text {
     margin-top: 5px;
 	font-size: 20px;
-	font-family: "robotolight", sans-serif;
+	font-family: "MontserratLight", sans-serif;
 	text-transform: capitalize;
 	text-shadow: 1px 1px #000;
 }
@@ -788,7 +794,7 @@ p {
 	position: relative;
 	bottom: -5px;
 	font-size: 20px;
-    font-family: "robotolight", sans-serif;
+    font-family: "MontserratLight", sans-serif;
 	opacity: 0;
 	transition: bottom 0.3s ease-in 0.1s, opacity 0.3s ease-in 0.1s;
 }
@@ -940,7 +946,7 @@ p {
     padding: 20px;
 	margin: 0 40px 40px;
     color: #777;
-	font-family: "robotolight", sans-serif;
+	font-family: "MontserratLight", sans-serif;
     font-size: 16px;
 	background: #fff;
     border: 1px solid #e6e6e6;
@@ -970,7 +976,7 @@ p {
 .reviews_position {
 	color: #94a3a8;
 	font-size: 14px;
-	font-family: "robotolight", sans-serif;
+	font-family: "MontserratLight", sans-serif;
 }
 .reviews .uk-slidenav-position .uk-slidenav {
 	top: 75%;
@@ -1132,7 +1138,7 @@ p {
 
 .contact {
     padding: 100px 0;
-	background: url('http://placehold.it/1920x1080') no-repeat 0 0;
+	background: url('../images/church-full-2.png') no-repeat 0 0;
     background-size: cover;
     background-attachment: fixed;
 	border: 0;
@@ -1142,7 +1148,7 @@ p {
 
 .subscribe {
 	padding: 170px 0 150px;
-    background: url('http://placehold.it/1920x1080') no-repeat center center;
+    background: url('../images/flowers_praise_darker.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 	border: 0;
@@ -1282,7 +1288,7 @@ p {
 }
 .address_text {
 	font-size: 16px;
-    font-family: 'robotolight', sans-serif;
+    font-family: 'MontserratLight', sans-serif;
 }
 
 /******* Map *******/

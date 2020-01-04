@@ -80,7 +80,7 @@
 }
 /* montserrat-300 - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'MontserratLight';
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/montserrat-v14-latin-300.eot'); /* IE9 Compat Modes */
@@ -424,7 +424,7 @@ h2,
 }
 h3,
 .uk-h3 {
-  font-family: 'open_sanslight', sans-serif;
+  font-family: 'MontserratLight', sans-serif;
   font-size: 42px;
   line-height: 48px;
 }
