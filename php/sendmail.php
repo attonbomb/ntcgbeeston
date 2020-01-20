@@ -11,12 +11,12 @@ if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])
 		}
 	}
 
-	$to = "digitalentertainment84@gmail.com";	// receiver of the email
-    $subject = "You have a message.";			// subject of the email
+	$to = "ntcgbeeston@gmail.com";	// receiver of the email
+    $subject = "Contact message sent via the NTCG Beeston church website.";			// subject of the email
 	$message = '
 	<html>
 		<head>
-			<title>Your Site Contact Form</title>
+			<title>NTCG Beeston Contact Form</title>
 		</head>
 		<body>
 			<h3>Name: <span style="font-weight: normal;">' . $_POST['name'] . '</span></h3>
