@@ -367,7 +367,32 @@
 			appropriate materials for study.  
 		</h4>
 		<!-- NEWSLETTER FORM -->
-		<form data-ng-submit="subLetterForm($event);" class="uk-form animated form_sign_in" autocomplete="off">
+		<form data-ng-submit="subLetterForm($event);" class="uk-form animated form_send_message" autocomplete="off">
+			<div class="uk-grid uk-grid-small uk-container-center uk-width-medium-2-3 uk-width-large-1-2 uk-margin-bottom">
+				<div class="uk-width-small-1-2 uk-margin-bottom">
+					<input name="name" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="Name">
+				</div>
+				<div class="uk-width-small-1-2 uk-margin-bottom">
+					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="E-mail">
+				</div>
+				<div class="uk-margin-bottom uk-width-1-1">
+					<textarea name="message" class="uk-width-1-1 uk-text-contrast form_textarea" placeholder="Message"></textarea>
+				</div>
+				<div class="uk-margin-bottom uk-width-1-1">
+					<button class="uk-button button_custom_green uk-width-1-1 form_button" type="submit">Send message</button>
+				</div>
+			</div>
+
+			<!-- IF MAIL SENT SUCCESSFULLY -->
+			<div class="success">Your message has been sent successfully.</div>
+			<div class="success_response"></div>
+
+			<!-- IF MAIL SENDING UNSUCCESSFULL -->
+			<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+			<div class="error_response"></div>
+		</form>
+		
+		<!--<form data-ng-submit="subLetterForm($event);" class="uk-form animated form_sign_in" autocomplete="off">
 			<div class="uk-grid uk-grid-collapse uk-container-center uk-width-medium-2-3 uk-width-large-1-2 uk-margin-bottom">
 				<div class="uk-width-small-3-4 uk-margin-bottom">
 					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="email" placeholder="Enter your e-mail">
@@ -375,16 +400,16 @@
 				<div class="uk-width-small-1-4 uk-margin-bottom">
 					<button class="uk-width-1-1 uk-button button_custom_green form_button" type="submit">Subscribe</button>
 				</div>
-			</div>
+			</div>-->
 
 			<!-- IF MAIL SENT SUCCESSFULLY -->
-			<div class="success">E-mail has been added successfully.</div>
-			<div class="success_response"></div>
+			<!--<div class="success">E-mail has been added successfully.</div>
+			<div class="success_response"></div>-->
 
 			<!-- IF MAIL SENDING UNSUCCESSFULL -->
-			<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+			<!--<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
 			<div class="error_response"></div>
-		</form>
+		</form>-->
 	</div>
 </section>
 
@@ -645,7 +670,7 @@
 						<img class="team_image" src="images/bro-tom.png" alt="">
 					</div>
 					<h4 class="uk-h4 uk-margin-small-bottom team_name">Bro Thomas Hatton</h4>
-					<div class="uk-margin-bottom team_position">Deacon</div>
+					<div class="uk-margin-bottom team_position">Youth and Christian Education Director</div>
 					<div class="uk-margin-bottom team_description">Bro Thomas is a married and father of three and has been a member of the New Testament Church of God for fifteen years.</div>
 					<!-- <ul class="uk-list social_list">
 						<li class="social_list_item">
@@ -887,13 +912,13 @@
 	<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 		<ul class="uk-nav uk-nav-offcanvas">
 			<li class="">
-				<a data-ng-click="scrollNav($event)" class="link_features" href="#">Service Times</a>
+				<a data-ng-click="scrollNav($event)" class="link_features" href="#">Meeting Times</a>
 			</li>
 			<li class="">
-				<a data-ng-click="scrollNav($event)" class="link_offer" href="#">About Us</a>
+				<a data-ng-click="scrollNav($event)" class="link_offer" href="#">A Place For Everyone</a>
 			</li>
 			<li class="">
-				<a data-ng-click="scrollNav($event)" class="link_pricing" href="#">Beliefs</a>
+				<a data-ng-click="scrollNav($event)" class="link_pricing" href="#">What We Believe</a>
 			</li>
 			<!--<li class="">
 				<a data-ng-click="scrollNav($event)" class="link_clients" href="#">Clients</a>
@@ -931,7 +956,7 @@
 					<button class="uk-width-1-1 uk-button button_custom_green form_button" type="submit">Subscribe</button>
 				</div>
 			</div>
-			<div class="response_wrapper">
+			<div class="response_wrapper">-->
 				<!-- IF MAIL SENT SUCCESSFULLY -->
 				<div class="success">E-mail has been added successfully.</div>
 				<div class="success_response"></div>
@@ -944,8 +969,6 @@
         <a class="uk-modal-close uk-close uk-border-circle subscribe_window_close"></a>
     </div>
 </div>
-
-
 
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/ngTouch.min.js"></script>
