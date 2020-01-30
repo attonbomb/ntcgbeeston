@@ -569,9 +569,9 @@ app.controller('myPageCtrl', function($scope,$http){
 
 		$event.preventDefault();
 		$scope.target = $($event.target),
-		$scope.name = $scope.target.find('[name="name"]').val(),
+		$scope.name = encodeURIComponent($scope.target.find('[name="name"]').val()),
 		$scope.email = $scope.target.find('[name="email"]').val(),
-		$scope.message = 'Request for more information about the Gospel of Jesus Christ:' + $scope.target.find('[name="message"]').val(),
+		$scope.message = 'Request for more information about the Gospel of Jesus Christ:' + encodeURIComponent($scope.target.find('[name="message"]').val()),
 		$scope.dataString = 'name=' + $scope.name + '&email=' + $scope.email + '&message=' + $scope.message;
 
 		$scope.isValidEmail = function(emailAddress) {
@@ -606,9 +606,9 @@ app.controller('myPageCtrl', function($scope,$http){
 	$scope.contactForm = function($event) {
 		$event.preventDefault();
 		$scope.target = $($event.target),
-		$scope.name = $scope.target.find('[name="name"]').val(),
+		$scope.name = encodeURIComponent($scope.target.find('[name="name"]').val()),
 		$scope.email = $scope.target.find('[name="email"]').val(),
-		$scope.message = "Contact form request:" + $scope.target.find('[name="message"]').val(),
+		$scope.message = "Contact form request:" + encodeURIComponent($scope.target.find('[name="message"]').val()),
 		$scope.dataString = 'name=' + $scope.name + '&email=' + $scope.email + '&message=' + $scope.message;
 
 		$scope.isValidEmail = function(emailAddress) {
