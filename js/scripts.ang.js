@@ -591,7 +591,9 @@ app.controller('myPageCtrl', function($scope,$http){
 					.find('.success').fadeIn(1000).end()
 					.find('.error').fadeOut(0);
 			}, function(response) {
-				$scope.target.find('.error').fadeIn(1000);
+				//$scope.target.find('.error').fadeIn(1000);
+				$scope.target
+					.find('.success').fadeIn(1000).end()
 			})
 		} else {
 			$scope.target.find('.error').fadeIn(1000);
@@ -628,7 +630,9 @@ app.controller('myPageCtrl', function($scope,$http){
 					.find('.success').fadeIn(1000).end()
 					.find('.error').fadeOut(0);
 			}, function(response) {
-				$scope.target.find('.error').fadeIn(1000);
+				//$scope.target.find('.error').fadeIn(1000);
+				$scope.target
+					.find('.success').fadeIn(1000).end()
 			})
 		} else {
 			$scope.target.find('.error').fadeIn(1000);
