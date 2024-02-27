@@ -572,7 +572,7 @@ app.controller('myPageCtrl', function($scope,$http){
 		$scope.name = encodeURIComponent($scope.target.find('[name="name"]').val()),
 		$scope.email = $scope.target.find('[name="email"]').val(),
 		$scope.message = 'Request for more information about the Gospel of Jesus Christ:' + encodeURIComponent($scope.target.find('[name="message"]').val()),
-		$scope.dataString = 'name=' + $scope.name + '&email=' + $scope.email + '&message=' + $scope.message;
+		$scope.dataString = '{\n "name": {"value":"' + $scope.name + '"},' + '\n "email": {"value":"' + $scope.email + '"},' + '\n "message": {"value":"' + $scope.message + '"}\n}';
 
 		$scope.isValidEmail = function(emailAddress) {
 			$scope.pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
@@ -582,9 +582,9 @@ app.controller('myPageCtrl', function($scope,$http){
 		if ($scope.isValidEmail($scope.email)) {
 			$http({
 				method: "POST",
-				url: "https://ntcgbeestonfunctionapp.azurewebsites.net/api/ForwardWebsiteContact",
+				url: "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?",
 				data: $scope.dataString,
-				headers: {"Content-Type": "application/x-www-form-urlencoded"}
+				headers: {"Content-Type": "application/json"}
 			}).then(function(response) {
 				$scope.removeFormElements($scope.target);
 				$scope.target
@@ -611,7 +611,7 @@ app.controller('myPageCtrl', function($scope,$http){
 		$scope.name = encodeURIComponent($scope.target.find('[name="name"]').val()),
 		$scope.email = $scope.target.find('[name="email"]').val(),
 		$scope.message = "Contact form request:" + encodeURIComponent($scope.target.find('[name="message"]').val()),
-		$scope.dataString = 'name=' + $scope.name + '&email=' + $scope.email + '&message=' + $scope.message;
+		$scope.dataString = '{\n "name": {"value":"' + $scope.name + '"},' + '\n "email": {"value":"' + $scope.email + '"},' + '\n "message": {"value":"' + $scope.message + '"}\n}';
 
 		$scope.isValidEmail = function(emailAddress) {
 			$scope.pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
@@ -621,9 +621,9 @@ app.controller('myPageCtrl', function($scope,$http){
 		if ($scope.isValidEmail($scope.email) && ($scope.message.length > 1) && ($scope.name.length > 1)) {
 			$http({
 				method: "POST",
-				url: "https://ntcgbeestonfunctionapp.azurewebsites.net/api/ForwardWebsiteContact",
+				url: "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?",
 				data: $scope.dataString,
-				headers: {"Content-Type": "application/x-www-form-urlencoded"}
+				headers: {"Content-Type": "application/json"}
 			}).then(function(response) {
 				$scope.removeFormElements($scope.target);
 				$scope.target

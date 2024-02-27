@@ -11,7 +11,7 @@ if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])
 		}
 	}
 
-	$to = "ntcgbeeston@gmail.com";	// receiver of the email
+	$to = "beestonntcg@gmail.com";	// receiver of the email
     $subject = "Contact message sent via the NTCG Beeston church website.";			// subject of the email
 	$message = '
 	<html>
