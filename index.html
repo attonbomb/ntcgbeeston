@@ -862,7 +862,7 @@
 				<div class="uk-margin-large-bottom address_item">
 					<div class="uk-icon-phone address_label"></div>
 					<h4 class="address_title">Call us</h4>
-					<div class="address_text">07982 905025<br>07985 484353</div>
+					<div class="address_text">07985 484353<br/>07961 109717</div>
 				</div>
 			</div>
 			<div class="uk-width-medium-1-3 animated">
@@ -877,7 +877,11 @@
 </section>
 
 <!-- Map -->
-<div class="map" id="map"></div>
+<div class="map" id="map">
+	<gmp-map center="53.773983001708984,-1.5464693307876587" zoom="14" map-id="DEMO_MAP_ID">
+		<gmp-advanced-marker position="53.773983001708984,-1.5464693307876587" title="My location"></gmp-advanced-marker>
+	</gmp-map>
+</div>
 
 <!-- Footer -->
 <footer class="footer">
@@ -980,7 +984,8 @@
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/ngTouch.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=#{mapsApiKey}#"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8rtvjnY9N5E-ekLC-GIocZLZHw-_aGYk&callback=console.debug&libraries=maps,marker&v=beta"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=#{mapsApiKey}#"></script>-->
 <script type="text/javascript" src="js/uikit.min.js"></script>
 <script type="text/javascript" src="js/slideshow.min.js"></script>
 <script type="text/javascript" src="js/slideshow-fx.min.js"></script>

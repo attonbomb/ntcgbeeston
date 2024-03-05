@@ -9,7 +9,7 @@ app.controller('myPageCtrl', function($scope,$http){
 	/* GOOGLE MAP
 	/* ------------------------------ */
 
-	$scope.mapInitialization = function() {
+	/*$scope.mapInitialization = function() {
 		$scope.myLatlng = new google.maps.LatLng(53.774122, -1.546130),
 		$scope.mapOptions = {
 			zoom: 18,
@@ -24,7 +24,7 @@ app.controller('myPageCtrl', function($scope,$http){
 		});
 	}
 
-	$scope.mapInitialization();
+	$scope.mapInitialization();*/
 
 	/* ------------------------------ */
 	/* SCROLL BUTTON
