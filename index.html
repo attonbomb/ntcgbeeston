@@ -377,13 +377,13 @@
 		<form data-ng-submit="subLetterForm($event);" class="uk-form animated form_send_message" autocomplete="off">
 			<div class="uk-grid uk-grid-small uk-container-center uk-width-medium-2-3 uk-width-large-1-2 uk-margin-bottom">
 				<div class="uk-width-small-1-2 uk-margin-bottom">
-					<input name="name" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="Name">
+					<input name="name" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="Name" maxlength="100" onkeypress="checkSpecialCharInput(event)">
 				</div>
 				<div class="uk-width-small-1-2 uk-margin-bottom">
-					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="E-mail">
+					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="E-mail" maxlength="100">
 				</div>
 				<div class="uk-margin-bottom uk-width-1-1">
-					<textarea name="message" class="uk-width-1-1 uk-text-contrast form_textarea" placeholder="Message"></textarea>
+					<textarea name="message" class="uk-width-1-1 uk-text-contrast form_textarea" placeholder="Message" maxlength="250" onkeypress="checkSpecialCharInput(event)"></textarea>
 				</div>
 				<div class="uk-margin-bottom uk-width-1-1">
 					<button class="uk-button button_custom_green uk-width-1-1 form_button" type="submit">Send message</button>
@@ -821,13 +821,13 @@
 		<form data-ng-submit="contactForm($event);" class="uk-form animated form_send_message" autocomplete="off">
 			<div class="uk-grid uk-grid-small uk-container-center uk-width-medium-2-3 uk-width-large-1-2 uk-margin-bottom">
 				<div class="uk-width-small-1-2 uk-margin-bottom">
-					<input name="name" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="Name">
+					<input name="name" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="Name" maxlength="100" onkeypress="checkSpecialCharInput(event)">
 				</div>
 				<div class="uk-width-small-1-2 uk-margin-bottom">
-					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="E-mail">
+					<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="text" placeholder="E-mail" maxlength="100">
 				</div>
 				<div class="uk-margin-bottom uk-width-1-1">
-					<textarea name="message" class="uk-width-1-1 uk-text-contrast form_textarea" placeholder="Message"></textarea>
+					<textarea name="message" class="uk-width-1-1 uk-text-contrast form_textarea" placeholder="Message" maxlength="250" onkeypress="checkSpecialCharInput(event)"></textarea>
 				</div>
 				<div class="uk-margin-bottom uk-width-1-1">
 					<button class="uk-button button_custom_green uk-width-1-1 form_button" type="submit">Send message</button>
@@ -839,7 +839,7 @@
 			<div class="success_response"></div>
 
 			<!-- IF MAIL SENDING UNSUCCESSFULL -->
-			<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+			<div class="error">All fields are required and E-mail must be valid.</div>
 			<div class="error_response"></div>
 		</form>
 	</div>
@@ -973,7 +973,7 @@
 				<div class="success_response"></div>
 
 				<!-- IF MAIL SENDING UNSUCCESSFULL -->
-				<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+				<div class="error">All fields are required and E-mail must be valid.</div>
 				<div class="error_response"></div>
 			</div>
 		</form>
@@ -994,5 +994,6 @@
 <script type="text/javascript" src="js/countUp.js"></script>
 <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
 <script type="text/javascript" src="js/scripts.ang.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>

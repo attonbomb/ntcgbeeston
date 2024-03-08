@@ -556,7 +556,7 @@ app.controller('myPageCtrl', function($scope,$http){
 	/* SUBSCRIBE FORM
 	/* ------------------------------ */
 
-	$scope.subLetterForm = function($event) {
+	$scope.subLetterForm = async ($event) => {
 		/*$event.preventDefault();
 		$scope.target = $($event.target),
 		$scope.email = $scope.target.find('[name="email"]').val(),
@@ -579,33 +579,45 @@ app.controller('myPageCtrl', function($scope,$http){
 			return $scope.pattern.test(emailAddress);
 		};
 
-		if ($scope.isValidEmail($scope.email)) {
-			$http({
-				method: "POST",
-				url: "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?",
-				data: $scope.dataString,
-				headers: {"Content-Type": "application/json"}
-			}).then(function(response) {
+		const url = "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?";
+
+		if ($scope.isValidEmail($scope.email) && ($scope.message.length > 1) && ($scope.name.length > 1)) {
+			try{
+				const response = await postData(url, $scope.dataString);
+				console.log('Success', response);
 				$scope.removeFormElements($scope.target);
 				$scope.target
 					.find('.success').fadeIn(1000).end()
 					.find('.error').fadeOut(0);
-			}, function(response) {
-				//$scope.target.find('.error').fadeIn(1000);
-				$scope.target
-					.find('.success').fadeIn(1000).end()
-			})
+			} catch (error) {
+				console.error('Error', error);
+				$scope.target.find('.error').fadeIn(1000).end();
+				$scope.target.find('.success').fadeOut(0);
+			}
 		} else {
 			$scope.target.find('.error').fadeIn(1000);
 		}
 
 	}
 
+	async function postData(url = '', data = '') {
+		// Default options are marked with {}
+		const response = await fetch(url, {
+		  method: 'POST',
+		  headers: {
+			'Content-Type': 'application/json'
+			// Add any other headers you need, like authorization headers
+		  },
+		  body: data
+		});
+		return response;//.json(); // Parses JSON response into native JavaScript objects
+	  }
+
 	/* ------------------------------ */
 	/* MESSAGE FORM
 	/* ------------------------------ */
 
-	$scope.contactForm = function($event) {
+	$scope.contactForm = async ($event) => {
 		$event.preventDefault();
 		$scope.target = $($event.target),
 		$scope.name = encodeURIComponent($scope.target.find('[name="name"]').val()),
@@ -618,22 +630,21 @@ app.controller('myPageCtrl', function($scope,$http){
 			return $scope.pattern.test(emailAddress);
 		};
 
+		const url = "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?";
+
 		if ($scope.isValidEmail($scope.email) && ($scope.message.length > 1) && ($scope.name.length > 1)) {
-			$http({
-				method: "POST",
-				url: "https://ntcgbeestonfunctionapp2.azurewebsites.net/api/SendEmailMessage?",
-				data: $scope.dataString,
-				headers: {"Content-Type": "application/json"}
-			}).then(function(response) {
+			try{
+				const response = await postData(url, $scope.dataString);
+				console.log('Success', response);
 				$scope.removeFormElements($scope.target);
 				$scope.target
 					.find('.success').fadeIn(1000).end()
 					.find('.error').fadeOut(0);
-			}, function(response) {
-				//$scope.target.find('.error').fadeIn(1000);
-				$scope.target
-					.find('.success').fadeIn(1000).end()
-			})
+			} catch (error) {
+				console.error('Error', error);
+				$scope.target.find('.error').fadeIn(1000).end();
+				$scope.target.find('.success').fadeOut(0);
+			}
 		} else {
 			$scope.target.find('.error').fadeIn(1000);
 		}
